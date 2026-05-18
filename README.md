@@ -20,7 +20,7 @@ An autonomous agent application built utilizing the **OpenClaw** framework, engi
 - Configuration files managing connection gateways, model failovers, and session lifecycles.
 
 
-## ⌨️ Operational Commands Used
+##  Operational Commands Used
 
 To build, test, and maintain this agent locally, the following core `openclaw` CLI commands are utilized:
 
@@ -31,7 +31,7 @@ To build, test, and maintain this agent locally, the following core `openclaw` C
 
 ---
 
-## 🧠 How Sau1ron Analyzes Inbound Questions
+##  How Sau1ron Analyzes Inbound Questions
 
 When a message hits a monitored Discord channel, `sau1ron` doesn't just pass raw text to an LLM. It parses the prompt using a structured NLP pipeline:
 
@@ -42,7 +42,7 @@ When a message hits a monitored Discord channel, `sau1ron` doesn't just pass raw
 
 ---
 
-## 🗄️ Where the Agent Gets Its Answers
+##  Where the Agent Gets Its Answers
 
 `sau1ron` relies on a **Local-First, Hybrid Knowledge Retrieval** architecture. Instead of pulling from a closed cloud server, it answers from three distinct layers:
 
