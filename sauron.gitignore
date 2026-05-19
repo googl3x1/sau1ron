@@ -1,0 +1,4 @@
+.env
+.openclaw/workspace/
+*.log
+openclaw.json
