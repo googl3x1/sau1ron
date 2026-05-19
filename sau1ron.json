@@ -1,0 +1,135 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "C:\\Users\\DELL\\.openclaw\\workspace",
+      "model": {
+        "primary": "openai/openai:gpt-4o",
+        "fallbacks": [
+          "openai/openai:gpt-4o-mini"
+        ]
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "openai": {
+        "baseUrl": "https://api.openai.com/v1",
+        "models": [
+          {
+            "id": "gpt-4o",
+            "name": "gpt-4o"
+          },
+          {
+            "id": "gpt-4o-mini",
+            "name": "gpt-4o-mini"
+          }
+        ],
+        "agentRuntime": {
+          "id": "pi"
+        }
+      }
+    }
+  },
+ "gateway": {
+  "mode": "token",
+  "auth": {
+    "mode": "token",
+    "token": "YOUR_GENERIC_GATEWAY_TOKEN_HERE"
+  }
+}
+    "port": 18795,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "allowCommands": [
+        "message.send",
+        "reminders.add",
+        "sessions_spawn",
+        "sessions.spawn"
+      ],
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "sms.send",
+        "sms.search"
+      ]
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "full",
+    "web": {
+      "search": {
+        "provider": "duckduckgo",
+        "enabled": true
+      }
+    }
+  },
+  "plugins": {
+    "bundledDiscovery": "compat",
+    "entries": {
+      "discord": {
+        "enabled": true
+      }
+    }
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "token": "Your Discord Token",
+      "dmPolicy": "open",
+      "allowFrom": [
+        "*"
+      ],
+      "groupPolicy": "allowlist",
+      "guilds": {
+        "1505224287781519371": {
+          "requireMention": true
+        }
+      }
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.5.12",
+    "lastTouchedAt": "2026-05-19T07:44:51.188Z"
+  },
+  "messages": {
+    "groupChat": {
+      "visibleReplies": "automatic"
+    }
+  },
+  "skills": {
+    "entries": {
+      "calendar.add": {
+        "enabled": true
+      },
+      "reminders.add": {
+        "enabled": true
+      },
+      "coding-agent": {
+        "enabled": false
+      },
+      "summarize": {
+        "enabled": false
+      }
+    }
+  },
+  "commands": {
+    "ownerAllowFrom": [
+      1472849325464883200
+    ]
+  },
+  "wizard": {
+    "lastRunAt": "2026-05-18T11:12:26.640Z",
+    "lastRunVersion": "2026.5.12",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  }
+}
